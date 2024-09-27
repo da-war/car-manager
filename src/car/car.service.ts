@@ -12,9 +12,16 @@ export class CarService {
         return this.cars.push(car);
     }
 
-    public async putCar(car) {
-        
+    public async putCarById(carId:number, car) {
+        const carIndex = this.cars.findIndex((car) => car.id === carId);
+        if (carIndex === -1) {
+            throw new HttpException('Car not found', 404);
+        }
+        this.cars[carIndex] = car;
+        return car;
     }
+
+
 
     public async deleteCarById(carId:number) {
         const carIndex= this.cars.findIndex((car) => car.id === carId);
