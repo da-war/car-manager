@@ -5,7 +5,7 @@
 
 
 
-Here’s a sample `README.md` for a **NestJS Backend CRUD for Cars** project that provides a clean and professional structure:
+
 
 ```md
 # 🚗 NestJS Cars API
